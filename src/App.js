@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+const userData = "https://jsonplaceholder.typicode.com/todos";
+
 function App() {
+
+  let userDetails = `${userData}${'/1'}`;
+  alert(userDetails);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+  <p>{userDetails}</p>
+
+        <h1>{userDetails.userId}</h1>
+        <h2>{userDetails.title}</h2>
+        <h2>{userDetails.completed}</h2>
+      </div>
     </div>
   );
 }
